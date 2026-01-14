@@ -1,0 +1,212 @@
+name: "Default-MM"
+register-support: false
+line-height: 7
+symbols:
+#chars
+  - symbol: "А"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101111101101"
+  - symbol: Б
+    sizeX: 3
+    sizeY: 5
+    scheme: "111100110101110"
+  - symbol: В
+    sizeX: 3
+    sizeY: 5
+    scheme: "110101110101110"
+  - symbol: Г
+    sizeX: 3
+    sizeY: 5
+    scheme: "111100100100100"
+  - symbol: Д
+    sizeX: 5
+    sizeY: 5
+    scheme: "0111001010010101111110001"
+  - symbol: Е
+    sizeX: 3
+    sizeY: 5
+    scheme: "111100111100111"
+  - symbol: Ё
+    sizeX: 3
+    sizeY: 7
+    bias: -2
+    scheme: "101000111100111100111"
+  - symbol: Ж
+    sizeX: 5
+    sizeY: 5
+    scheme: "1010110101011101010110101"
+  - symbol: З
+    sizeX: 3
+    sizeY: 5
+    scheme: "111001110001111"
+  - symbol: И
+    sizeX: 5
+    sizeY: 5
+    scheme: "1000110011101011100110001"
+  - symbol: Й
+    sizeX: 5
+    sizeY: 7
+    bias: -2
+    scheme: "01010001001000110011101011100110001"
+  - symbol: К
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101110101101"
+  - symbol: Л
+    sizeX: 4
+    sizeY: 5
+    scheme: "00110101010110011001"
+  - symbol: М
+    sizeX: 5
+    sizeY: 5
+    scheme: "1000111011101011000110001"
+  - symbol: Н
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101111101101"
+  - symbol: О
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101101101111"
+  - symbol: П
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101101101101"
+  - symbol: Р
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101111100100"
+  - symbol: С
+    sizeX: 3
+    sizeY: 5
+    scheme: "111100100100111"
+  - symbol: Т
+    sizeX: 3
+    sizeY: 5
+    scheme: "111010010010010"
+  - symbol: У
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101111001110"
+  - symbol: Ф
+    sizeX: 5
+    sizeY: 6
+    scheme: "1111110101111110010000100"
+  - symbol: Х
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101010101101"
+  - symbol: Ц
+    sizeX: 4
+    sizeY: 6
+    scheme: "101010101010101011110001"
+  - symbol: Ч
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101111001001"
+  - symbol: Ш
+    sizeX: 5
+    sizeY: 5
+    scheme: "1010110101101011010111111"
+  - symbol: Щ
+    sizeX: 6
+    sizeY: 6
+    scheme: "101010101010101010101010111111000001"
+  - symbol: Ъ
+    sizeX: 4
+    sizeY: 5
+    scheme: "11000100011101010111"
+  - symbol: Ы
+    sizeX: 5
+    sizeY: 5
+    scheme: "1000110001111011010111101"
+  - symbol: Ь
+    sizeX: 3
+    sizeY: 5
+    scheme: "100100110101110"
+  - symbol: Э
+    sizeX: 3
+    sizeY: 5
+    scheme: "110001111001110"
+  - symbol: Ю
+    sizeX: 5
+    sizeY: 5
+    scheme: "1011110101111011010110111"
+  - symbol: Я
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101011101101"
+
+#nums
+  - symbol: "0"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101101101111"
+  - symbol: "1"
+    sizeX: 3
+    sizeY: 5
+    scheme: "010110010010111"
+  - symbol: "2"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111001111100111"
+  - symbol: "3"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111001110001111"
+  - symbol: "4"
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101111001001"
+  - symbol: "5"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111100111001111"
+  - symbol: "6"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111100111101111"
+  - symbol: "7"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111001010010010"
+  - symbol: "8"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101111101111"
+  - symbol: "9"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111101111001111"
+
+#marks
+  - symbol: " "
+    sizeX: 3
+    sizeY: 5
+    scheme: "000000000000000"
+  - symbol: "."
+    sizeX: 3
+    sizeY: 5
+    scheme: "000000000000010"
+  - symbol: ","
+    sizeX: 3
+    sizeY: 5
+    bias: 1
+    scheme: "000000000010110"
+  - symbol: "!"
+    sizeX: 2
+    sizeY: 5
+    scheme: "0101010001"
+  - symbol: "?"
+    sizeX: 3
+    sizeY: 5
+    scheme: "111001010000010"
+  - symbol: ":"
+    sizeX: 3
+    sizeY: 5
+    scheme: "000010000000010"
+  - symbol: ";"
+    sizeX: 3
+    sizeY: 5
+    scheme: "000010000010110"
