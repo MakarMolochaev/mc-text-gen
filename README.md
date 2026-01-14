@@ -24,16 +24,17 @@ The *human-readable* format makes it relatively easy to add your own characters 
 Each font file contains *header*:
 ```yaml
 name: "<font name>"
-register-support: false #this parameter isn't using now
-line-height: 7 #max letter Y size, aka Line Height
+register-support: false    #this parameter isn't using now
+line-height: 7             #max letter Y size, aka Line Height
 ```
 
 Next, there is a list with symbols:
 ```yaml
 - symbol: "<symbol character>"
-    sizeX: 3 #size in blocks X
-    sizeY: 5 #size in blocks by Y
-    scheme: "111101101111101" #flattened letter scheme
+    sizeX: 3                    #size in blocks by X
+    sizeY: 5                    #size in blocks by Y
+    bias: 0                     #optional parameter, recommended use between -sizeY and +sizeY (recommended not use)
+    scheme: "111101101111101"   #flattened letter scheme
 ```
 For example, scheme "111101111101101" corresponds the letter А (cyrillic)
 ```
