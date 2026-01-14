@@ -21,6 +21,6 @@ func main() {
 
 	generator := fontloader.NewSchematicGenerator(fontData)
 	lines := []string{"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЭЮЯ!0123456789.,!?:;", "Пронос овощей на экзамен запрещён!!"}
-	generator.Generate(lines)
-	generator.Save("test.litematic")
+	generator.Generate(lines, fontloader.Horizontal) //fontloader.Horizontal / Vertical
+	generator.Save("test1.litematic")
 }
