@@ -124,7 +124,7 @@ symbols:
   - symbol: Ь
     sizeX: 3
     sizeY: 5
-    scheme: "100100110101110"
+    scheme: "100100111101111"
   - symbol: Э
     sizeX: 3
     sizeY: 5
@@ -210,3 +210,43 @@ symbols:
     sizeX: 3
     sizeY: 5
     scheme: "000010000010110"
+  - symbol: "\""
+    sizeX: 3
+    sizeY: 5
+    scheme: "101101000000000"
+  - symbol: "-"
+    sizeX: 3
+    sizeY: 5
+    scheme: "000000111000000"
+  - symbol: "—"
+    sizeX: 5
+    sizeY: 5
+    scheme: "0000000000111110000000000"
+  - symbol: "("
+    sizeX: 3
+    sizeY: 5
+    scheme: "010100100100010"
+  - symbol: ")"
+    sizeX: 3
+    sizeY: 5
+    scheme: "010001001001010"
+  - symbol: "]"
+    sizeX: 3
+    sizeY: 5
+    scheme: "110010010010110"
+  - symbol: "["
+    sizeX: 3
+    sizeY: 5
+    scheme: "110100100100110"
+  - symbol: "«"
+    sizeX: 5
+    sizeY: 5
+    scheme: "0000001001100100100100000"
+  - symbol: "»"
+    sizeX: 5
+    sizeY: 5
+    scheme: "00000100100100110010"
+  - symbol: "*"
+    sizeX: 4
+    sizeY: 5
+    scheme: "01010010010100000000"

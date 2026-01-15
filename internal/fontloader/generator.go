@@ -31,7 +31,13 @@ func (g *SchematicGenerator) getWidth(textLines []string) int {
 	for _, text := range textLines {
 		currentW := 0
 		for _, char := range strings.ToUpper(text) {
-			currentW += g.font.symbolCache[string(char)].SizeX + g.LetterSpacing
+			sym, err := g.font.GetSymbol(string(char))
+			if !err {
+				//fmt.Printf("Font %s doesn't contains symbol '%s'. It will be not displayed in schematic!\n", g.font.Name, string(char))
+				currentW += g.font.LineHeight + g.LetterSpacing
+				continue //not panic but notifying about it
+			}
+			currentW += sym.SizeX + g.LetterSpacing
 		}
 		w = max(w, currentW)
 	}
@@ -43,25 +49,27 @@ func (g *SchematicGenerator) getHeight(textLines []string) int {
 	return len(textLines) * (g.font.LineHeight + g.LineSpacing)
 }
 
-func (g *SchematicGenerator) Generate(textLines []string, orientation Orientation) {
+func (g *SchematicGenerator) Generate(textLines []string, projectName string, orientation Orientation) {
 	if orientation.index != 0 && orientation.index != 1 {
 		orientation.index = 1
 	}
 	w := g.getWidth(textLines)
 	h := g.getHeight(textLines)
-	fmt.Println(w)
-	fmt.Println(h)
 	if orientation.index == 1 {
-		g.project = schematic.NewProject("Test", w+g.font.LineHeight, h+g.font.LineHeight, 1)
+		g.project = schematic.NewProject(projectName, w+g.font.LineHeight, h+g.font.LineHeight, 1)
 	} else {
-		g.project = schematic.NewProject("Test", w+g.font.LineHeight, 1, h+g.font.LineHeight)
+		g.project = schematic.NewProject(projectName, w+g.font.LineHeight, 1, h+g.font.LineHeight)
 	}
 
 	posX := 0
 	posY := 0
 	for _, line := range textLines {
 		for _, letter := range strings.ToUpper(line) {
-			symbol := g.font.symbolCache[string(letter)]
+			symbol, err := g.font.GetSymbol(string(letter))
+			if !err {
+				//fmt.Printf("Font %s doesn't contains symbol '%s'. It will be not displayed in schematic!\n", g.font.Name, string(letter))
+				continue
+			}
 			i := 0
 			j := 0
 			for _, ch := range symbol.Scheme {
@@ -95,6 +103,7 @@ func (g *SchematicGenerator) Save(filename string) {
 	if err != nil {
 		panic(err)
 	}
+	fmt.Printf("Schematic '%s' was exported into 'export/%s'. size: (%d x %d x %d)\n", g.project.RegionName, filename, g.project.Size().X, g.project.Size().Y, g.project.Size().Z)
 	defer file.Close()
 	g.project.Encode(file)
 }

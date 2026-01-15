@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/makarmolochaev/mc-text-gen/internal/fontloader"
+	"github.com/makarmolochaev/mc-text-gen/internal/utils"
 )
 
 func main() {
@@ -12,15 +13,13 @@ func main() {
 		log.Fatalf("Error in font loading: %v", err)
 	}
 
-	/*
-		lines, err := utils.ReadAllLines("examples/phrase.txt")
-		if err != nil {
-			log.Fatalf("Error in file reading: %v", err)
-		}
-	*/
+	lines, err := utils.ReadAllLines("examples/phrase.txt")
+	if err != nil {
+		log.Fatalf("Error in file reading: %v", err)
+	}
 
 	generator := fontloader.NewSchematicGenerator(fontData)
-	lines := []string{"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЭЮЯ!0123456789.,!?:;", "Пронос овощей на экзамен запрещён!!"}
-	generator.Generate(lines, fontloader.Horizontal) //fontloader.Horizontal / Vertical
-	generator.Save("test1.litematic")
+	//lines := []string{"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ!0123456789.,!?:;", "Пронос овощей на экзамен запрещён!!"}
+	generator.Generate(lines, "mutanti", fontloader.Horizontal) //fontloader.Horizontal / Vertical
+	generator.Save("mutanti.litematic")
 }
