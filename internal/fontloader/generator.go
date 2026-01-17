@@ -49,7 +49,7 @@ func (g *SchematicGenerator) getHeight(textLines []string) int {
 	return len(textLines) * (g.font.LineHeight + g.LineSpacing)
 }
 
-func (g *SchematicGenerator) Generate(textLines []string, projectName string, orientation Orientation) {
+func (g *SchematicGenerator) Generate(textLines []string, projectName string, block block.Block, orientation Orientation) {
 	if orientation.index != 0 && orientation.index != 1 {
 		orientation.index = 1
 	}
@@ -75,9 +75,9 @@ func (g *SchematicGenerator) Generate(textLines []string, projectName string, or
 			for _, ch := range symbol.Scheme {
 				if ch == '1' {
 					if orientation.index == 1 {
-						g.project.SetBlock(posX+i, h-(posY+j+symbol.Bias), 0, block.WhiteConcrete{})
+						g.project.SetBlock(posX+i, h-(posY+j+symbol.Bias), 0, block)
 					} else {
-						g.project.SetBlock(w-(posX+i), 0, h-(posY+j+symbol.Bias), block.WhiteConcrete{})
+						g.project.SetBlock(w-(posX+i), 0, h-(posY+j+symbol.Bias), block)
 					}
 				}
 				i++
