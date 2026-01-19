@@ -1,8 +1,9 @@
 # Minecraft schematic text generator
 
 
-![Go Version](https://img.shields.io/badge/Go-1.24%2B-00ADD8?style=flat-square&logo=go)
-![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
+![Version](https://img.shields.io/badge/Ver-1.2-a?style=for-the-badge&labelColor=aa100a&color=abbdda)  
+![Go version](https://img.shields.io/badge/Go-1.24%2B-lightblue?style=for-the-badge&logo=go&label=Go)
+![License: MIT License](https://img.shields.io/badge/License-mit-lightblue.svg?style=for-the-badge)
 
 <img src="./img/readme_pic.jpg" alt="Логотип" width="1000" height="600" />
 
